@@ -1,0 +1,48 @@
+class School_supplys:
+    def __init__(self,name,age_group,cost):
+        self.name = name
+        self.age_group = age_group
+        self.cost = cost
+    def supplydetail(self):
+        print(self.name)
+        print(self.age_group)
+        print(self.cost)
+
+class Pencil(School_supplys):#schools_sypplys bracket shoes perent class
+    #class variable same for all objects
+    catagory = "starionery"
+
+    #construtor
+    def __init__(self,name,age_group,cost,color,length,thickness):
+        #instans variables diffrent for every object
+        #metod 1
+        #School_supplys.__init__(self,name,age_group,cost)
+        #metod 2
+        super().__init__(name,age_group,cost)
+        self.color = color
+        self.length = length
+        self.thickness = thickness
+    def sharpen(self):
+        self.length = self.length - 0.2
+
+pencil1 = Pencil("RedPen",7,1,"red",10,2)
+
+print(pencil1.color)
+print(pencil1.length)
+print(pencil1.thickness)
+print(pencil1.catagory)
+pencil1.sharpen()
+print(pencil1.length)
+
+pencil2 = Pencil("BluePen",10,2,"blue",12,8)
+
+print(pencil2.color)
+print(pencil2.length)
+print(pencil2.thickness)
+print(pencil2.catagory)
+
+pencil1.supplydetail()
+pencil2.supplydetail()
+
+supply1 = School_supplys("stuff",34,23)
+supply1.supplydetail()
