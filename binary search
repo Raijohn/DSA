@@ -1,0 +1,17 @@
+numbers = [12,34,65,78,90]
+start = 0
+end = len(numbers) - 1
+
+item = int(input("number "))
+
+while start <= end:
+    mid = (start+end)//2 
+    if numbers[mid] == item:
+        print("found at " + str(mid))
+        break
+    elif numbers[mid] > item:
+        end = mid - 1
+    else:
+        start = mid + 1    
+if start > end:
+    print("not there")     
