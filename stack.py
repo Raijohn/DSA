@@ -26,21 +26,29 @@ class Stack:
     def showstack(self):
         print(self.stack)
 
-stack1  = Stack(3)
-stack1.push(2)
-stack1.showstack()
+    def check_is_there(self,item):
+        if item in self.stack:
+            return True
+        else:
+            return False
+        
 
-stack1.push(5)
-stack1.showstack()
 
-stack1.push(9)
-stack1.showstack()
+#stack1  = Stack(3)
+#stack1.push(2)
+#stack1.showstack()
 
-print(stack1.top())
+#stack1.push(5)
+#stack1.showstack()
 
-stack1.push(91)
-stack1.showstack()
+#stack1.push(9)
+#stack1.showstack()
 
-for i in range(4):
-    print(stack1.pop())
-    stack1.showstack()
+#print(stack1.top())
+
+#stack1.push(91)
+#stack1.showstack()
+
+#for i in range(4):
+#    print(stack1.pop())
+#    stack1.showstack()
